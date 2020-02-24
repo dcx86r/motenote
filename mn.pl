@@ -73,10 +73,8 @@ sub create {
 }
 
 my $sep = "-" x 20 . "\n";
-my $file = "testdata.txt";
-# ToDo - error if ! -e $file
-tie my @a, 'Tie::File', $file, recsep => $sep
-	if -e $file;
+my $file = "notes.txt";
+tie my @a, 'Tie::File', $file, recsep => $sep;
 
 # ToDo - for "show" action, take hash value(s) or time frame
 my $actions = {
